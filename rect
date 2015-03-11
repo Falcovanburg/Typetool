@@ -1,0 +1,65 @@
+import processing.pdf.*;
+
+import processing.pdf.*;
+
+ 
+int xPos = 300;
+int yPos = 300;
+float xLength = 25;
+float yLength = 25;
+ 
+void setup(){
+ size(600,600);
+ background(250);
+ beginRecord(PDF, "Type_tool.pdf");
+ noStroke();
+}
+ 
+void draw(){
+  
+
+} 
+void keyPressed(){
+  switch(key){
+case 'z':
+background(255);
+break;
+  }
+   switch(key){
+case 'w':
+yPos = yPos - 25;
+   fill(250,0 ,0);
+    rect(xPos, yPos, 25, 25);
+    fill(0, 0, 250);
+    rect(xPos+25, yPos, 25, 25);
+  }
+  switch(key){
+case 'a':
+   xPos = xPos - 25;
+    fill(250,0,0);
+       rect(xPos, yPos, 25, 25);
+       fill(0, 0, 250);
+    rect(xPos, yPos+25, 25, 25);
+  }
+    switch(key){
+case 's':
+      yPos = yPos + 25;
+     fill(250, 0, 0);
+    rect(xPos, yPos, 25, 25);
+    fill(0, 0, 250);
+    rect(xPos+25, yPos, 25, 25);
+  }
+      switch(key){
+case 'd':
+     xPos = xPos + 25;
+      fill(250, 0, 0);
+       rect(xPos, yPos, 25, 25);
+       fill(0, 0, 250);
+    rect(xPos, yPos+25, 25, 25);
+  }
+  if (key == 'q') {
+    endRecord();
+    exit();
+  }
+}
+
